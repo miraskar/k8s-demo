@@ -18,4 +18,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: rajendrait99/workflow:latest
+          tags: miraskar/workflow:latest

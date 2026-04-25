@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workflow-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: workflow-app
+  template:
+    metadata:
+      labels:
+        app: workflow-app
+    spec:
+      containers:
+      - name: workflow-app
+        image: miraskar/workflow:latest
+        ports:
+        - containerPort: 3000
